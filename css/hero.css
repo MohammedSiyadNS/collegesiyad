@@ -1,0 +1,81 @@
+/* css/hero.css — Full-viewport hero banner */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)),
+        url('../assets/hero_campus.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    color: var(--text-white);
+    padding-top: var(--header-height);
+}
+
+.hero-content {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-tagline {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 7px 22px;
+    background: rgba(15, 23, 42, 0.60);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 50px;
+    box-shadow: 0 0 18px rgba(251, 191, 36, 0.15), inset 0 0 12px rgba(251, 191, 36, 0.04);
+    animation: taglinePulse 3s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, #38bdf8, #a5b4fc, #6ee7b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subheading {
+    font-size: 1.35rem;
+    color: #e2e8f0;
+    margin-bottom: 40px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+@keyframes taglinePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 18px rgba(251, 191, 36, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.04);
+        border-color: rgba(251, 191, 36, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 32px rgba(251, 191, 36, 0.45), inset 0 0 18px rgba(251, 191, 36, 0.08);
+        border-color: rgba(251, 191, 36, 0.7);
+    }
+}

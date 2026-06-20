@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cybolink Institute of Studies - Shaping future innovators through world-class engineering, business, and creative art programs in Kakkanad, Kochi, Kerala.">
+    <title>Cybolink Institute of Studies | Empowering Education for a Better Future</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Modular Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css?v=2">
+    <link rel="stylesheet" href="css/announcement.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/admissions.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════
+         HEADER
+    ═══════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo-link">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="cyberGradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#4f46e5" />
+                                <stop offset="60%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#10b981" />
+                            </linearGradient>
+                            <filter id="glowHeader" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <!-- Modern Crest / Shield Shield Path -->
+                        <path
+                            d="M50 8 C 72 8, 88 16, 88 38 C 88 64, 68 84, 50 92 C 32 84, 12 64, 12 38 C 12 16, 28 8, 50 8 Z"
+                            fill="#0f172a" stroke="url(#cyberGradHeader)" stroke-width="5.5" stroke-linejoin="round" />
+                        <!-- Glowing inner outline -->
+                        <path
+                            d="M50 15 C 68 15, 81 22, 81 38 C 81 58, 65 75, 50 82 C 35 75, 19 58, 19 38 C 19 22, 32 15, 50 15 Z"
+                            fill="none" stroke="url(#cyberGradHeader)" stroke-width="1.5" opacity="0.4" />
+                        <!-- The Digital Link / Connection Core (Shaped like a stylized graduation cap + nodes) -->
+                        <polygon points="50,26 72,36 50,46 28,36" fill="url(#cyberGradHeader)" opacity="0.9" />
+                        <!-- Circuit Traces on Cap -->
+                        <line x1="50" y1="26" x2="50" y2="46" stroke="#ffffff" stroke-width="1.5" opacity="0.8" />
+                        <line x1="28" y1="36" x2="72" y2="36" stroke="#ffffff" stroke-width="1.5" opacity="0.8" />
+                        <circle cx="50" cy="36" r="3" fill="#ffffff" />
+                        <!-- Tassel Node -->
+                        <path d="M72 36 L 76 46 L 76 52" fill="none" stroke="url(#cyberGradHeader)" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="76" cy="52" r="3.5" fill="#10b981" filter="url(#glowHeader)" />
+                        <!-- Cap Base / Interconnected Links -->
+                        <path d="M 38,47 L 38,55 C 38,62 43,65 50,65 C 57,65 62,62 62,55 L 62,47" fill="none"
+                            stroke="url(#cyberGradHeader)" stroke-width="4" stroke-linecap="round" />
+                        <!-- Bottom Connected Node representing data stream/studies -->
+                        <circle cx="50" cy="74" r="4.5" fill="#10b981" filter="url(#glowHeader)" />
+                        <line x1="50" y1="65" x2="50" y2="74" stroke="#10b981" stroke-width="2"
+                            stroke-dasharray="2 2" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span>Cybolink</span>
+                    <span class="logo-sub">Institute of Studies</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#admissions" class="nav-link">Admissions</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ═══════════════════════════════════════════
+             HERO
+        ═══════════════════════════════════════════ -->
+        <section class="hero" id="home">
+            <!-- Premium Announcement Marquee -->
+            <div class="announcement-marquee" id="hero-announcement-marquee"></div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tagline">Admissions Open 2026/27</span>
+                    <h1>Welcome to <br><span>Cybolink Institute</span></h1>
+                    <p class="hero-subheading">Empowering Education for a Better Future. Join a community of thinkers,
+                        creators, and leaders shaping the tomorrow of technology and commerce.</p>
+                    <div class="hero-actions">
+                        <a href="#admissions" class="btn btn-primary">Apply Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#about" class="btn btn-outline" style="color:#fff;border-color:#fff;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             ABOUT
+        ═══════════════════════════════════════════ -->
+        <section class="about id-reveal" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h3>Shaping the Innovators of Tomorrow</h3>
+                        <p>Founded on the principles of rigorous academic enquiry and creative discovery, Cybolink
+                            Institute of Studies has been at the forefront of higher education for over five decades.
+                            We offer an environment where cutting-edge research meets practical application, preparing
+                            students to tackle the world's most complex challenges.</p>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Placement Rate</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Programs</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">10k+</div>
+                                <div class="stat-label">Global Alumni</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-img-wrapper reveal">
+                        <div class="about-img-container">
+                            <img src="assets/about_library.png" alt="Cybolink Institute Library Study Area">
+                            <div class="about-img-overlay"></div>
+                        </div>
+
+                        <!-- Floating Campus Showcase Video Card -->
+                        <div class="floating-video-card" id="open-video-btn" title="Watch Campus Tour">
+                            <div class="video-card-glow"></div>
+                            <div class="video-card-content">
+                                <div class="play-btn-wrapper">
+                                    <div class="play-btn-ripple"></div>
+                                    <div class="play-btn">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="video-card-text">
+                                    <div class="video-card-tag"><i class="fa-solid fa-circle"></i> Live Tour</div>
+                                    <span class="video-card-title">Campus Showcase</span>
+                                    <span class="video-card-meta">2:15 • Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             COURSES
+        ═══════════════════════════════════════════ -->
+        <section class="courses id-reveal" id="courses">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Academic Programs</h2>
+                    <p>Discover our world-class departments designed to give you specialized hands-on expertise and
+                        analytical capabilities.</p>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card reveal">
+                        <div class="course-img-wrapper">
+                            <img src="assets/course_cs.png" alt="Computer Science and Artificial Intelligence Lab">
+                            <span class="course-tag">School of Tech</span>
+                        </div>
+                        <div class="course-info">
+                            <h4>Software Engineering &amp; AI</h4>
+                            <p>Master modern programming models, machine learning architectures, and scalable computing
+                                systems. Designed for future architects of software systems.</p>
+                            <a href="#contact" class="course-link">Enquire Program <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card reveal">
+                        <div class="course-img-wrapper">
+                            <img src="assets/course_business.png" alt="Business and Entrepreneurship Seminar Room">
+                            <span class="course-tag">School of Business</span>
+                        </div>
+                        <div class="course-info">
+                            <h4>Business Admin &amp; Leadership</h4>
+                            <p>Build the fundamental strategic, financial, and organizational skills to lead modern
+                                startups, corporations, and global enterprises with high impact.</p>
+                            <a href="#contact" class="course-link">Enquire Program <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card reveal">
+                        <div class="course-img-wrapper">
+                            <img src="assets/course_design.png" alt="Creative Design and Media Art Studio">
+                            <span class="course-tag">School of Design</span>
+                        </div>
+                        <div class="course-info">
+                            <h4>Creative Arts &amp; Digital Media</h4>
+                            <p>Unleash your creative voice using digital illustration, design processes, and
+                                experiential UI/UX practices tailored for a competitive digital art world.</p>
+                            <a href="#contact" class="course-link">Enquire Program <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             ADMISSIONS
+        ═══════════════════════════════════════════ -->
+        <section class="admissions id-reveal" id="admissions">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Admission Process</h2>
+                    <p>Start your educational journey. Our streamlined entry guidelines are designed to evaluate
+                        potential, passion, and performance.</p>
+                </div>
+
+                <div class="admissions-grid">
+                    <!-- Steps Overview -->
+                    <div class="admissions-overview reveal">
+                        <h3>Simple Three-Step Path</h3>
+                        <p>We invite candidates who want to challenge themselves. Review our application guidelines
+                            below to get started on your enrollment profile today.</p>
+
+                        <div class="process-steps">
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Submit Application Form</h5>
+                                    <p>Fill out the application online with your demographic details, academic scores,
+                                        and standard test certifications.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Document Assessment</h5>
+                                    <p>Our expert admission board evaluates all academic histories, recommendation
+                                        letters, and optional digital portfolios.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Selection Interview</h5>
+                                    <p>Participate in a virtual or campus interface chat with our department faculties
+                                        to align on academic projections.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admissions-actions">
+                            <a href="#contact" class="btn btn-primary">Apply Now</a>
+                            <a href="#contact" class="btn btn-outline">View Admission Details</a>
+                        </div>
+                    </div>
+
+                    <!-- CyboBot Chatbot Widget -->
+                    <div class="chatbot-wrapper reveal" id="chatbot-wrapper">
+                        <div class="chatbot-header">
+                            <div class="chatbot-avatar">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="chatbot-info">
+                                <h4>CyboBot</h4>
+                                <p><span class="status-dot"></span> Admissions Assistant (Online)</p>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-body" id="chatbot-body">
+                            <div class="chat-msg bot">
+                                Hello! Welcome to Cybolink Admissions Support. How can I help you today?
+                                <div class="chat-chips">
+                                    <button class="chat-chip" onclick="handleChipClick('Admissions Process')">Admissions
+                                        Process</button>
+                                    <button class="chat-chip"
+                                        onclick="handleChipClick('Scholarships')">Scholarships</button>
+                                    <button class="chat-chip" onclick="handleChipClick('Deadlines')">Key
+                                        Deadlines</button>
+                                    <button class="chat-chip" onclick="handleChipClick('Fee Structure')">Fee
+                                        Structure</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-footer">
+                            <input type="text" class="chatbot-input" id="chatbot-input"
+                                placeholder="Ask Bot something..." aria-label="Type message to chatbot">
+                            <button class="chatbot-send" id="chatbot-send" aria-label="Send message to chatbot">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             CONTACT
+        ═══════════════════════════════════════════ -->
+        <section class="contact id-reveal" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Info Panel -->
+                    <div class="contact-info reveal">
+                        <div class="contact-info-desc">
+                            <h3>Get in Touch</h3>
+                            <p>Have questions about enrollment, academic programs, or campus visits? Contact our support
+                                staff or leave an enquiry message.</p>
+                        </div>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-text">
+                                    <h5>Campus Address</h5>
+                                    <p>Infopark Campus Road, Kakkanad, Kochi, Kerala 682042, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <h5>Contact Phone</h5>
+                                    <p>+91 8921980155</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <h5>Office Email</h5>
+                                    <p>info@cybolink.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enquiry Form -->
+                    <div class="contact-form-container reveal">
+                        <form id="enquiry-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="form-name">Full Name *</label>
+                                <input type="text" id="form-name" placeholder="yourname">
+                                <span class="error-message">Name is required.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-email">Email Address *</label>
+                                <input type="email" id="form-email" placeholder="yourname@example.com">
+                                <span class="error-message">Provide a valid email address.</span>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="form-phone">Phone Number *</label>
+                                <input type="tel" id="form-phone" placeholder="+91 ----------">
+                                <span class="error-message">Phone number is required.</span>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="form-message">Enquiry Message *</label>
+                                <textarea id="form-message" rows="5" placeholder="How can we help you?"></textarea>
+                                <span class="error-message">Message is required.</span>
+                            </div>
+
+                            <div class="form-submit-container">
+                                <button type="submit" class="btn btn-primary">Submit Enquiry <i
+                                        class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="#home" class="logo-link">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 100 100" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="cyberGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#4f46e5" />
+                                        <stop offset="60%" stop-color="#3b82f6" />
+                                        <stop offset="100%" stop-color="#10b981" />
+                                    </linearGradient>
+                                    <filter id="glowFooter" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <!-- Modern Crest / Shield Shield Path -->
+                                <path
+                                    d="M50 8 C 72 8, 88 16, 88 38 C 88 64, 68 84, 50 92 C 32 84, 12 64, 12 38 C 12 16, 28 8, 50 8 Z"
+                                    fill="#0f172a" stroke="url(#cyberGradFooter)" stroke-width="5.5"
+                                    stroke-linejoin="round" />
+                                <!-- Glowing inner outline -->
+                                <path
+                                    d="M50 15 C 68 15, 81 22, 81 38 C 81 58, 65 75, 50 82 C 35 75, 19 58, 19 38 C 19 22, 32 15, 50 15 Z"
+                                    fill="none" stroke="url(#cyberGradFooter)" stroke-width="1.5" opacity="0.4" />
+                                <!-- The Digital Link / Connection Core (Shaped like a stylized graduation cap + nodes) -->
+                                <polygon points="50,26 72,36 50,46 28,36" fill="url(#cyberGradFooter)" opacity="0.9" />
+                                <!-- Circuit Traces on Cap -->
+                                <line x1="50" y1="26" x2="50" y2="46" stroke="#ffffff" stroke-width="1.5"
+                                    opacity="0.8" />
+                                <line x1="28" y1="36" x2="72" y2="36" stroke="#ffffff" stroke-width="1.5"
+                                    opacity="0.8" />
+                                <circle cx="50" cy="36" r="3" fill="#ffffff" />
+                                <!-- Tassel Node -->
+                                <path d="M72 36 L 76 46 L 76 52" fill="none" stroke="url(#cyberGradFooter)"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="76" cy="52" r="3.5" fill="#10b981" filter="url(#glowFooter)" />
+                                <!-- Cap Base / Interconnected Links -->
+                                <path d="M 38,47 L 38,55 C 38,62 43,65 50,65 C 57,65 62,62 62,55 L 62,47" fill="none"
+                                    stroke="url(#cyberGradFooter)" stroke-width="4" stroke-linecap="round" />
+                                <!-- Bottom Connected Node representing data stream/studies -->
+                                <circle cx="50" cy="74" r="4.5" fill="#10b981" filter="url(#glowFooter)" />
+                                <line x1="50" y1="65" x2="50" y2="74" stroke="#10b981" stroke-width="2"
+                                    stroke-dasharray="2 2" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span>Cybolink</span>
+                            <span class="logo-sub">Institute of Studies</span>
+                        </div>
+                    </a>
+                    <p>Pioneering scientific learning, visionary research, and global social development since 1974.
+                        Join our network of excellence.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Cybolink on Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Cybolink on Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Cybolink on LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Cybolink on Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-title">Academic Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home Portal</a>
+                        <a href="#about">About Institute</a>
+                        <a href="#courses">Courses Catalogue</a>
+                        <a href="#admissions">Admissions Central</a>
+                        <a href="#contact">Contact Support</a>
+                    </div>
+                </div>
+
+                <!-- Direct Contact -->
+                <div>
+                    <h4 class="footer-title">Direct Contact</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Infopark Campus Road, Kakkanad, Kochi, Kerala 682042, India</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>+91 8921980155</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                            <span>info@cybolink.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cybolink Institute of Studies. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast toast-success" id="toast-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Thank you! Your enquiry has been submitted.</span>
+    </div>
+
+    <!-- Video Modal Overlay & Player Container -->
+    <div class="video-modal" id="video-modal">
+        <div class="video-modal-overlay" id="video-modal-overlay"></div>
+        <div class="video-modal-container">
+            <button class="video-modal-close" id="video-modal-close" aria-label="Close video">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-body">
+                <iframe id="campus-video" src="" title="Campus Showcase Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modular JavaScript (defer = non-blocking, DOM-ready) -->
+    <script src="js/header.js" defer></script>
+    <script src="js/scroll-reveal.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/contact-form.js" defer></script>
+    <script src="js/about-video.js" defer></script>
+    <script src="js/announcements.js" defer></script>
+</body>
+
+</html>
