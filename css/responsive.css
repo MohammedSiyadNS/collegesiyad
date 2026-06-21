@@ -1,0 +1,323 @@
+/* css/responsive.css — Comprehensive Mobile-First Responsive Overrides
+   Covers: 320px | 375px | 425px | 768px | 1024px | 1440px
+   Preserves all desktop styles exactly. Only adds mobile/tablet adaptations.
+*/
+
+/* ============================================================
+   GLOBAL HELPERS — prevent all horizontal overflow
+   ============================================================ */
+html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Touch-friendlier tap targets */
+a, button, .btn, .nav-link, .chat-chip, .course-link {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================================
+   1440px+ — Large Desktops (no changes, just a safety wrapper)
+   ============================================================ */
+@media (min-width: 1440px) {
+    .container { padding: 0 40px; }
+    section { padding: 120px 40px; }
+}
+
+/* ============================================================
+   MAX 1024px — Tablets Landscape
+   ============================================================ */
+@media (max-width: 1024px) {
+    /* Header */
+    .header-container { padding: 0 20px; }
+    .logo-text { font-size: 1.3rem; }
+    .nav-list { gap: 24px; }
+
+    /* Hero */
+    .hero h1 { font-size: 3.2rem; }
+    .hero-subheading { font-size: 1.2rem; }
+    .hero-content { max-width: 680px; }
+
+    /* About */
+    .about-grid { gap: 40px; }
+    .about-stats { gap: 14px; }
+
+    /* Courses */
+    .courses-grid { gap: 20px; }
+
+    /* Admissions */
+    .admissions-grid { grid-template-columns: 1fr; gap: 40px; }
+    .chatbot-wrapper { height: 500px; }
+
+    /* Contact */
+    .contact-grid { gap: 40px; }
+    .contact-form-container { padding: 30px; }
+
+    /* Footer */
+    .footer-grid { gap: 36px; }
+}
+
+/* ============================================================
+   MAX 768px — Tablets Portrait + Large Phones
+   ============================================================ */
+@media (max-width: 768px) {
+    /* ── Global ── */
+    html { font-size: 15px; }
+    section { padding: 70px 20px; }
+    .section-header h2 { font-size: 2rem; }
+    .section-header p { font-size: 1rem; }
+
+    /* ── Header / Navigation ── */
+    .header-container { padding: 0 16px; }
+    .logo-text { font-size: 1.25rem; }
+    .logo-sub { font-size: 0.6rem; }
+    .logo-icon { width: 38px; height: 38px; }
+
+    .nav-toggle { display: flex; }
+
+    .nav-menu {
+        position: fixed;
+        top: 0; right: -100%;
+        width: min(280px, 85vw);
+        height: 100vh;
+        background: var(--card-bg);
+        box-shadow: -10px 0 30px rgba(15, 23, 42, 0.15);
+        padding: 90px 36px 40px 36px;
+        display: flex; flex-direction: column;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1050;
+        border-left: 1px solid var(--border-color);
+        overflow-y: auto;
+    }
+    .nav-menu.open { right: 0; }
+    .nav-list { flex-direction: column; gap: 24px; }
+    .nav-link { font-size: 1.1rem; color: var(--text-main); }
+    .header.scrolled .nav-link { color: var(--text-main); }
+
+    /* ── Announcement Marquee ── */
+    .announcement-marquee { height: 38px; }
+    .marquee-item { font-size: 0.78rem; gap: 7px; }
+    .marquee-icon { font-size: 0.9rem; }
+    .marquee-divider { margin: 0 20px; }
+
+    /* ── Hero ── */
+    .hero {
+        min-height: 100svh;
+        align-items: flex-start;
+        padding-top: calc(var(--header-height) + 38px + 32px); /* header + marquee + breathing room */
+        padding-bottom: 60px;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        letter-spacing: -0.5px;
+    }
+    .hero-tagline {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        padding: 6px 16px;
+    }
+    .hero-subheading {
+        font-size: 1rem;
+        margin-bottom: 32px;
+        max-width: 100%;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        padding: 14px 28px;
+    }
+
+    /* ── About ── */
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-img-wrapper {
+        order: -1;
+        height: 280px;
+        margin-bottom: 0;
+    }
+    .about-img-container { height: 100%; }
+    .about-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .stat-card { padding: 18px 10px; }
+    .stat-number { font-size: 1.75rem; }
+    .stat-label { font-size: 0.75rem; }
+
+    .floating-video-card {
+        bottom: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        max-width: 290px;
+        animation: none;
+    }
+
+    /* ── Courses ── */
+    .courses-grid { grid-template-columns: 1fr; gap: 24px; }
+    .course-img-wrapper { height: 200px; }
+    .course-info { padding: 22px; }
+
+    /* ── Admissions ── */
+    .admissions-grid { grid-template-columns: 1fr; gap: 40px; }
+    .admissions-overview h3 { font-size: 1.65rem; }
+    .admissions-actions { flex-direction: column; gap: 12px; }
+    .admissions-actions .btn { width: 100%; justify-content: center; }
+
+    .chatbot-wrapper { height: auto; min-height: 440px; max-height: 600px; }
+    .chatbot-header { padding: 14px 18px; gap: 12px; }
+    .chatbot-avatar { width: 42px; height: 42px; font-size: 1.2rem; }
+    .chatbot-body { padding: 16px 14px 12px 14px; }
+    .chat-msg { font-size: 0.85rem; padding: 11px 14px; max-width: 88%; }
+    .chatbot-footer { padding: 12px; }
+    .chatbot-input { padding: 10px 14px; font-size: 0.875rem; }
+    .chatbot-send { width: 42px; height: 42px; }
+    .chat-chip { font-size: 0.75rem; padding: 6px 12px; }
+
+    /* ── Contact ── */
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-form-container { padding: 24px 20px; }
+    .contact-form { grid-template-columns: 1fr; gap: 18px; }
+    .form-group.full-width { grid-column: span 1; }
+    .form-submit-container { grid-column: span 1; }
+    .contact-info-desc h3 { font-size: 1.6rem; }
+    .contact-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+
+    /* ── Footer ── */
+    .footer { padding: 60px 20px 28px 20px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 40px; }
+    .footer-brand .logo-text { font-size: 1.25rem; }
+    .footer-bottom { flex-direction: column; gap: 14px; text-align: center; font-size: 0.8rem; }
+    .footer-bottom-links { justify-content: center; gap: 16px; }
+
+    /* ── Toast ── */
+    .toast { bottom: 16px; right: 16px; left: 16px; right: 16px; padding: 14px 18px; font-size: 0.9rem; }
+}
+
+/* ============================================================
+   MAX 480px — Compact Phones (iPhone SE, Galaxy A)
+   ============================================================ */
+@media (max-width: 480px) {
+    html { font-size: 14.5px; }
+    section { padding: 60px 16px; }
+
+    /* Header */
+    .logo-text { font-size: 1.15rem; }
+    .logo-sub { display: none; } /* very small screens: hide sub-tagline */
+
+    /* Hero */
+    .hero h1 { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+    .hero-tagline { font-size: 0.7rem; letter-spacing: 1.5px; padding: 5px 14px; }
+    .hero-subheading { font-size: 0.95rem; }
+    .hero-actions .btn { max-width: 100%; }
+
+    /* About stats: stack into 2-column grid on tiny screens */
+    .about-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .stat-number { font-size: 1.5rem; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 0; }
+
+    /* Announcement */
+    .marquee-item { font-size: 0.72rem; }
+    .marquee-divider { margin: 0 14px; }
+
+    /* Contact */
+    .contact-form-container { padding: 20px 16px; }
+
+    /* Courses grid: reduce image height */
+    .course-img-wrapper { height: 180px; }
+
+    /* Footer */
+    .footer { padding: 50px 16px 24px 16px; }
+    .footer-socials { gap: 8px; }
+    .social-icon { width: 34px; height: 34px; font-size: 0.95rem; }
+
+    /* Admissions */
+    .step-item { gap: 14px; }
+    .step-num { width: 38px; height: 38px; font-size: 1rem; }
+    .step-content h5 { font-size: 1rem; }
+
+    /* Chatbot */
+    .chatbot-wrapper { max-height: 520px; }
+    .chat-chips { gap: 6px; }
+}
+
+/* ============================================================
+   MAX 375px — Small Phones (iPhone SE, Galaxy S8)
+   ============================================================ */
+@media (max-width: 375px) {
+    html { font-size: 14px; }
+
+    .hero h1 { font-size: clamp(1.7rem, 10vw, 2.2rem); }
+    .hero-tagline { font-size: 0.65rem; letter-spacing: 1px; }
+
+    .logo-text { font-size: 1.05rem; }
+    .nav-menu { width: 92vw; padding: 90px 24px 40px 24px; }
+
+    .about-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat-card { padding: 14px 8px; }
+
+    .contact-form-container { padding: 16px 14px; }
+    .chatbot-wrapper { max-height: 480px; }
+}
+
+/* ============================================================
+   MAX 320px — Absolute Minimum (Galaxy Fold, old iPhones)
+   ============================================================ */
+@media (max-width: 320px) {
+    html { font-size: 13px; }
+    section { padding: 50px 12px; }
+
+    .hero h1 { font-size: 1.7rem; letter-spacing: 0; }
+    .hero-tagline { font-size: 0.6rem; letter-spacing: 0.5px; }
+
+    .header-container { padding: 0 12px; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-text { font-size: 1rem; }
+
+    .about-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .stat-card { padding: 12px 6px; }
+    .stat-number { font-size: 1.3rem; }
+
+    .hero-actions .btn { font-size: 0.85rem; padding: 12px 20px; }
+
+    .chatbot-footer { padding: 10px; gap: 8px; }
+    .chatbot-send { width: 38px; height: 38px; }
+    .chatbot-input { padding: 8px 12px; }
+
+    .footer { padding: 40px 12px 20px 12px; }
+    .footer-grid { gap: 28px; }
+}
+
+/* ============================================================
+   UTILITY — Prevent horizontal scroll from any overflowing
+   child elements anywhere in the layout
+   ============================================================ */
+.container,
+.hero-content,
+.about-grid,
+.courses-grid,
+.admissions-grid,
+.contact-grid,
+.footer-grid,
+.footer-bottom {
+    max-width: 100%;
+    word-break: break-word;
+}
+
+/* Touch: increase min-touch target size */
+@media (max-width: 768px) {
+    .btn, .social-icon, .chatbot-send, .nav-toggle, .video-modal-close {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .nav-toggle {
+        min-width: unset; /* override for the thin hamburger icon */
+        width: 24px; height: 18px;
+    }
+}
